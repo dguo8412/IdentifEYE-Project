@@ -49,12 +49,13 @@ def del_exam(records: dict, examIDtoID: dict, entryList: list):
     # edge case: ignore if the examID does NOT exist
     if examID in examIDtoID.keys():
         ID = examIDtoID[examID]
+        del examIDtoID[examID]
         records[ID][1].remove(examID)
 
 def main():
 
     # Read and parse txt input file
-    fileName = "input.txt" # edit this to test on different txt files
+    fileName = "my_tests/del_exam_test.txt" # edit this to test on different txt files
     file = open(fileName)
     records = {}
     examIDtoID = {}
