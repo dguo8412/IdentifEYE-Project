@@ -55,7 +55,7 @@ def del_exam(records: dict, examIDtoID: dict, entryList: list):
 def main():
 
     # Read and parse txt input file
-    fileName = "my_tests/basic_test.txt" # edit this to test on different txt files
+    fileName = "input.txt" # edit this to test on different txt files
     file = open(fileName)
     records = {}
     examIDtoID = {}
